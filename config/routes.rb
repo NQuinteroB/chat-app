@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "/index", to: "pages#index"
+  get "/dashboard", to: "pages#dashboard"
 
   resources :chat_rooms
 

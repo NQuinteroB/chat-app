@@ -18,6 +18,7 @@
                   required: false,
                   input_html: { autocomplete: "languages" } %>
     <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :image, as: :file %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

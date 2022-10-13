@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 User.destroy_all
+ChatRoom.destroy_all
 
 puts "Create 2 users..."
 
@@ -22,5 +23,12 @@ justus = User.new(
   password: "testtest"
 )
 justus.save!
+
+chatroom1 = ChatRoom.new(
+  name: "Cat",
+  description: "blabla"
+)
+chatroom1.user = justus
+chatroom1.save!
 
 puts "Finished!"

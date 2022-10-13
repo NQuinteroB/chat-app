@@ -1,4 +1,7 @@
+<div class="container">
 <h1>All Chatrooms</h1>
 
-<%= @chat_rooms.name %>
-<% raise %>
+<% @chat_rooms.each do |chat_room| %>
+  <%= chat_room.name %>
+<% end %>
+</div>

@@ -23,4 +23,11 @@ justus = User.new(
 )
 justus.save!
 
+dog_chat = ChatRoom.new(
+  name: "Dog chatroom",
+  description: "This is a chat for dogs"
+)
+dog_chat.user = natalia
+dog_chat.save!
+
 puts "Finished!"

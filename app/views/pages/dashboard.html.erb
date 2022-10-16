@@ -1,10 +1,13 @@
-<h1>Your Dashboard</h1>
-<br>
-<h3>Hi, <%= current_user.username %>!</h3>
-<br>
-<h2>Profile</h2>
-<p>username: <%= current_user.username %></p>
-<p>about me: <%= current_user.aboutme %></p>
-<p>city: <%= current_user.city %></p>
-<br>
-<%= link_to "Update your profile", edit_user_registration_path %>
+<div class="container">
+  <h1>Your Dashboard</h1>
+  <br>
+  <h3>Hi, <%= current_user.username %>!</h3>
+  <br>
+  <h2>Profile</h2>
+  <p><%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill %></p>
+  <p>username: <%= current_user.username %></p>
+  <p>about me: <%= current_user.aboutme %></p>
+  <p>city: <%= current_user.city %></p>
+  <br>
+  <%= link_to "Update your profile", edit_user_registration_path %>
+<div>

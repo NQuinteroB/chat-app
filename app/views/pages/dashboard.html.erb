@@ -11,13 +11,15 @@
   </div>
   <div class="row">
     <div class="col-4">
-      <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill%>
+      <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill %>
     </div>
     <div class="profilinfo col-4">
       <p>username: <%= current_user.username %><p>
       <p>city: <%= current_user.city %></p>
       <p>about you: <%= current_user.aboutme %></p>
-
+    </div>
+    <div class="updateprofile col-4">
+      <%= link_to "Update your profile", edit_user_registration_path %>
     </div>
   </div>
 <div>
